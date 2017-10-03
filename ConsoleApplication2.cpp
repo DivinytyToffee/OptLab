@@ -131,9 +131,10 @@ int main(int argc, char* argv[])
 	auto a = -M_PI() / 2;
 	auto b = M_PI() / 2;
 	Dih(a, b, epsilon);
-	//auto first = _time32();
+	auto first = clock();
 	Fib(a, b, epsilon);
-	//auto second = time();
+	auto second = clock();
+	std::cout << second - first;
 	//Console.WriteLine(second - first);
 	return 0;
 }
